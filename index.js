@@ -1,5 +1,11 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  for (let i = 0; i < word.length/2; i++) {
+    if (word[i] !== word[word.length-i-1]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /* 
@@ -9,12 +15,11 @@ function isPalindrome(word) {
 /*
   Add written explanation of your solution here
 */
-
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
-  console.log("=>", isPalindrome("racecar"));
+  console.log("=>", isPalindrome("aaa"));
 
   console.log("");
 
